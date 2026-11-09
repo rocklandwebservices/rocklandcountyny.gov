@@ -39,12 +39,21 @@
 		}
 
 		#departmentAccordion {
-			--bs-accordion-btn-bg: #f3f6f4;
-			--bs-accordion-btn-color: var(--county-ink);
-			--bs-accordion-active-bg: #e8f4ec;
-			--bs-accordion-active-color: #005c43;
+			--bs-accordion-border-color: #b6d7c1;
+			--bs-accordion-btn-bg: #fff;
+			--bs-accordion-btn-color: #005c43;
+			--bs-accordion-active-bg: #005c43;
+			--bs-accordion-active-color: #fff;
 			--bs-accordion-btn-focus-border-color: var(--county-green);
 			--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(0, 163, 118, 0.3);
+		}
+
+		#departmentAccordion .accordion-item {
+			border-left: 4px solid var(--county-green);
+		}
+
+		#departmentAccordion .accordion-button:not(.collapsed)::after {
+			filter: brightness(0) invert(1);
 		}
 
 		.contact-card {
