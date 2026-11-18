@@ -1,0 +1,53 @@
+:root {
+	color-scheme: light;
+	--county-ink: #263238;
+	--county-green: #00A376;
+	--county-paper: #f3f6f4;
+}
+body {
+	background: var(--county-paper);
+	color: var(--county-ink);
+}
+.page-shell {
+	max-width: 760px;
+}
+.county-logo {
+	width: min(100%, 304px);
+	height: auto;
+}
+.status-alert {
+	--bs-alert-bg: #e8f4ec;
+	--bs-alert-border-color: #b6d7c1;
+	--bs-alert-color: #174b32;
+}
+#departmentAccordion {
+	--bs-accordion-border-color: #b6d7c1;
+	--bs-accordion-btn-bg: #fff;
+	--bs-accordion-btn-color: #005c43;
+	--bs-accordion-active-bg: #005c43;
+	--bs-accordion-active-color: #fff;
+	--bs-accordion-btn-focus-border-color: var(--county-green);
+	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(0, 163, 118, 0.3);
+}
+#departmentAccordion .accordion-item {
+	border-left: 4px solid var(--county-green);
+}
+#departmentAccordion .accordion-button:not(.collapsed)::after {
+	filter: brightness(0) invert(1);
+}
+.contact-card {
+	border-left: 4px solid var(--county-green);
+	border-radius: 6px;
+}
+.contact-card a:not(.btn) {
+	color: var(--county-green);
+	font-weight: 600;
+}
+.status-label {
+	color: var(--county-green);
+}
+.badge-sm {
+	font-size: 0.45em; /* Shrinks the text */
+	padding: 0.2em 0.5em; /* Tightens the bubble */
+	line-height: 1; 
+}
