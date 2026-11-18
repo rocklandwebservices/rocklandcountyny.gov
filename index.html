@@ -18,10 +18,17 @@
 	<main class="container py-4 py-sm-5">
 		{% include page-header.html %}
 		{% include sucess-alertNormalOps.html %}
-		{% include section-mainContact.html %}
-		<!--Include the Department list accordion here.-->
-		{% include department-list-accordion.html %}
-		<!--END Department list accordion-->
+
+		{% comment %}
+		** Do not include the conten below but let's keep it here for reference. **
+
+			{% include section-mainContact.html %}
+			<!--Include the Department list accordion here.-->
+			{% include department-list-accordion.html %}
+			<!--END Department list accordion-->
+			
+		{% endcomment %}
+
 		{% include page-footer.html %}
 	</main>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
