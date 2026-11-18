@@ -2,6 +2,8 @@
 	color-scheme: light;
 	--county-ink: #263238;
 	--county-green: #00A376;
+	--county-green-link: #007A58;
+	--county-green-dark: #005c43;
 	--county-paper: #f3f6f4;
 }
 body {
@@ -15,16 +17,55 @@ body {
 	width: min(100%, 304px);
 	height: auto;
 }
+
+/* Custom Brand Link */
+a.brand-link {
+	color: var(--county-green-link);
+	font-weight: 500;
+	text-decoration: underline;
+	text-decoration-color: var(--county-green);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	transition: color 0.15s ease-in-out, text-decoration-color 0.15s ease-in-out;
+}
+a.brand-link:hover,
+a.brand-link:focus-visible {
+	color: var(--county-green-dark);
+	text-decoration-color: var(--county-green-dark);
+}
+a.brand-link:focus-visible {
+	outline: 2px solid var(--county-green);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* Bootstrap Primary Button Override */
+.btn-primary {
+	--bs-btn-color: #fff;
+	--bs-btn-bg: var(--county-green-link);
+	--bs-btn-border-color: var(--county-green-link);
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: var(--county-green-dark);
+	--bs-btn-hover-border-color: var(--county-green-dark);
+	--bs-btn-focus-shadow-rgb: 0, 163, 118; /* Hex #00A376 converted to RGB */
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: var(--county-green-dark);
+	--bs-btn-active-border-color: var(--county-green-dark);
+	--bs-btn-disabled-bg: var(--county-green);
+	--bs-btn-disabled-border-color: var(--county-green);
+}
+
 .status-alert {
 	--bs-alert-bg: #e8f4ec;
 	--bs-alert-border-color: #b6d7c1;
 	--bs-alert-color: #174b32;
 }
+
 #departmentAccordion {
 	--bs-accordion-border-color: #b6d7c1;
 	--bs-accordion-btn-bg: #fff;
-	--bs-accordion-btn-color: #005c43;
-	--bs-accordion-active-bg: #005c43;
+	--bs-accordion-btn-color: var(--county-green-dark);
+	--bs-accordion-active-bg: var(--county-green-dark);
 	--bs-accordion-active-color: #fff;
 	--bs-accordion-btn-focus-border-color: var(--county-green);
 	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(0, 163, 118, 0.3);
@@ -35,19 +76,27 @@ body {
 #departmentAccordion .accordion-button:not(.collapsed)::after {
 	filter: brightness(0) invert(1);
 }
+
 .contact-card {
 	border-left: 4px solid var(--county-green);
 	border-radius: 6px;
 }
 .contact-card a:not(.btn) {
-	color: var(--county-green);
+	color: var(--county-green-link);
 	font-weight: 600;
+	text-decoration-color: var(--county-green);
 }
+.contact-card a:not(.btn):hover,
+.contact-card a:not(.btn):focus-visible {
+	color: var(--county-green-dark);
+}
+
 .status-label {
-	color: var(--county-green);
+	color: var(--county-green-link);
 }
+
 .badge-sm {
 	font-size: 0.45em; /* Shrinks the text */
 	padding: 0.2em 0.5em; /* Tightens the bubble */
-	line-height: 1; 
+	line-height: 1;
 }
